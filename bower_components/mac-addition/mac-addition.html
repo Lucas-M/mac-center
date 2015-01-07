@@ -1,0 +1,27 @@
+<link rel="import" href="../polymer/polymer.html">
+<polymer-element name="mac-addition">
+	<template>
+		<p>Enter 2 numbers and click the add button.<p>
+		<input type="text" placeholder="1st number" id='first_number' value="{{num1}}">
+		<input type="text" placeholder="2nd number" id='second_number'  value="{{num2}}">
+		<input type="button" value="Compute" id="btn_add_numbers" onclick="{{add_numbers}}">
+		<input id="ageInput" type="range" value="{{age}}">
+		<br>
+		Answer: {{num1}}
+		<br>
+		Age: {{age}}
+	</template>
+    <script>
+        Polymer('mac-addition', {
+        	num1: null,
+        	num2: null,
+        	answer: this.num1 + this.num2
+	     //    answer: "None",
+	    	// add_numbers: function add_numbers(){
+	    	// 	console.log("ADD NUMBERS");
+	    	// 	this.answer = this.num1 + this.num2;
+	    	// }
+        });
+
+    </script>
+</polymer-element>
