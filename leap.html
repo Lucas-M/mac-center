@@ -6,20 +6,27 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/leapstrap.css">
+    <link rel="stylesheet" href="css/leapstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/leap.js"></script>
+    <script src="js/vendor/leapstrap.js"></script>
 </head>
-    <body>
+<body>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
 
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"></button>
-          <a class="navbar-brand" href="#">mac center</a>
+          <a class="navbar-brand" href="./index.html">mac center</a>
         </div>
 
         <div class="navbar-collapse collapse">
@@ -44,8 +51,23 @@
 
     <div class="jumbotron">
       <div class="container">
-        <h1>Examples</h1>
+        <h1>Leap Motion</h1>
       </div>
+    </div>
+
+    <div class='container'>
+        <div class='well'>
+            <h5>By default, all the &lta&gt's will be leap enabled. Nice....</h5>
+            <a href="//ford.com">To ford.com</a>
+        </div>
+    </div>
+
+    <div class='container'>
+        <div class='well'>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default leap-interactive">Left</button> <button type="button" class="btn btn-default leap-interactive">Middle</button> <button type="button" class="btn btn-default leap-interactive">Right</button> 
+            </div>
+        </div>
     </div>
 
     <div class="container">
@@ -55,9 +77,8 @@
       </footer>
     </div> <!-- /container -->        
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Init Leap, Set all "a" interactive, use 1 Leap cursor/finger -->
+    <script>LeapManager.init({interactiveSelector:"a",maxCursors:1});</script>
+
 </body>
 </html>
