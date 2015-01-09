@@ -64,11 +64,38 @@
 
     <div class='container'>
         <div class='well'>
-            <div class="btn-group">
-                <button type="button" class="btn btn-default leap-interactive">Left</button> <button type="button" class="btn btn-default leap-interactive">Middle</button> <button type="button" class="btn btn-default leap-interactive">Right</button> 
+            <div class="dropdown ">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle leap-interactive" data-toggle="dropdown">Primary <span class="caret"></span></button> 
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a class="leap-interactive" href="#">Action</a></li>
+                        <li><a class="leap-interactive" href="#">Another action</a></li>
+                        <li><a class="leap-interactive" href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a class="leap-interactive" href="#">Separated link</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class='container'>
+        <div class='well'>
+            <div class="btn-group">
+                <button type="button" onclick="show_me(this)" data-name='left'   class="btn btn-default leap-interactive">Left</button> 
+                <button type="button" onclick="show_me(this)" data-name='middle' class="btn btn-default leap-interactive">Middle</button> 
+                <button type="button" onclick="show_me(this)" data-name='right'  class="btn btn-default leap-interactive">Right</button> 
+            </div>
+        </div>
+    </div>
+
+    <div class='container'>
+        <div class='well'>
+        <h4>Leap Component</h4>
+            <leap-button></leap-button>
+        </div>
+    </div>
+
 
     <div class="container">
       <hr>
@@ -78,7 +105,36 @@
     </div> <!-- /container -->        
 
     <!-- Init Leap, Set all "a" interactive, use 1 Leap cursor/finger -->
-    <script>LeapManager.init({interactiveSelector:"a",maxCursors:1});</script>
+    <!-- <script>LeapManager.init({interactiveSelector:"a",maxCursors:1});</script> -->
+
+    <link rel="import" href="../bower_components/polymer/polymer.html">
+    <polymer-element name="leap-button">
+        <template>
+            <link rel="stylesheet" href="css/leapstrap.css">
+            <link rel="stylesheet" href="css/leapstrap.min.css">
+            <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="css/main.css">
+
+            <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+            <script src="js/vendor/bootstrap.min.js"></script>
+            <script src="js/main.js"></script>
+            <script src="js/vendor/leap.js"></script>
+            <script src="js/vendor/leapstrap.js"></script>
+
+           
+            <h1>Test<h1>
+            <button type="button"data-name='component' class="btn btn-default leap-interactive">Left</button> 
+
+            <script>LeapManager.init({interactiveSelector:"a",maxCursors:1});</script>
+        </template>
+        <script>
+            Polymer('leap-button', {
+
+            });
+        </script>
+    </polymer-element>
 
 </body>
 </html>

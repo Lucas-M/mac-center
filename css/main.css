@@ -5,14 +5,158 @@
    ========================================================================== */
 
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+/*    padding-top: 50px;
+    padding-bottom: 20px;*/
+}
+
+hr { 
+	display: block; 
+	height: 1px;
+    border: 0; 
+    border-top: 1px solid #ccc;
+    margin: 1em 0; 
+    padding: 0; 
 }
 
 
 
+body {
+  background: #EA5D88;
+}
 
+.logo img {
+  height: 35px;
+  vertical-align: middle;
+}
 
+collapse-toolbar {
+  background: #E4E4E4;
+  border-radius: 4px 4px 0 0;
+  background-color:;
+}
+
+.container {
+  background: #ffffff;
+  padding: 50px 0;
+}
+
+collapse-toolbar,
+.container {
+  border-bottom: 4px solid #C3C8CD;
+}
+
+.quote-container {
+  background-color: #E4E4E4;
+}
+
+.blog-container {
+  padding: 50px 15%;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #C3C8CD;
+  margin-bottom: 25px;
+}
+
+.rect {
+  border-radius: 2px;
+  width: 70px;
+  height: 15px;
+  background-color: #C3C8CD;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.light {
+  background-color: #CFD3D6;
+}
+
+.stretch {
+  width: 95%;
+}
+
+.quote.dark {
+  height: 20px;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.quote.light {
+  width: 350px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.blog {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.photo {
+  border-radius: 2px;
+  width: 150px;
+  height: 150px;
+  background-color: #C3C8CD;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+paper-toggle-button::shadow paper-radio-button::shadow #ink[checked] {
+  color: #4285f4;
+}
+
+@media screen and (max-width: 500px) {
+  .banner .rect {
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .quote.dark {
+    width: 150px;
+  }
+
+  .quote.light {
+    width: 250px;
+  }
+}
+
+    paper-checkbox {
+      padding: 20px 20px 20px 0;
+    }
+    
+    section {
+      width: 300px;
+    }
+    
+    paper-checkbox.blue::shadow #ink[checked] {
+      color: #4285f4;
+    }
+    
+    paper-checkbox.blue::shadow #checkbox.checked {
+      border-color: #4285f4;
+    }
+
+/**/
+/*    Code for the core-toolbar mode   */
+/**/
+
+/*core-header-panel[mode=cover]::shadow #mainContainer {
+	left: 180px;
+}
+.content {
+	margin: 60px 180px 60px 0;
+}
+
+body {
+	background-color: #ccc;
+}*/
 
 
 
