@@ -41,6 +41,7 @@
   </paper-tabs>
 
   <core-pages selected="{{selected}}">
+
     <div>
       <template id="template_1" repeat="{{response.feed.entry}}">
         <div class="card">
@@ -52,6 +53,7 @@
           params='{"alt":"json", "q":"motorcycle"}'
           handleAs="json"></core-ajax>
     </div>
+
     <div>
       <template id="template_2" repeat="{{response.feed.entry}}">
         <div class="card">
@@ -62,18 +64,17 @@
       <core-ajax id="ajax2" auto url="//gdata.youtube.com/feeds/api/videos/" 
           params='{"alt":"json", "q":"moon"}'
           handleAs="json"></core-ajax>
-
     </div>
-    <div>Page 3
 
-      <template id="template_3" repeat="{{response.feed.entry}}">
+    <div>
+      <template id="template_3" repeat="{{response}}">
         <div class="card">
             First: {{fname}}  Last: {{lname}}
         </div>
       </template>
 
       <core-ajax id="ajax3" auto url='http://www.filltext.com' 
-          params='{"rows": "3", "fname": "{firstName}", "lname": "{lastName}"}'
+          params='{"rows": "10", "fname": "{firstName}", "lname": "{lastName}"}'
           handleAs="json"></core-ajax>
     </div>
   </core-pages>
@@ -92,7 +93,7 @@
       var ajax1 = document.querySelector("#ajax1");
       ajax1.addEventListener("core-response", 
         function(e) {
-          // console.log("E1 " + JSON.stringify(e.detail, null, 4) + "\n\n\n" + Object.keys(e));
+          // console.log("E1 " + JSON.stringify(e.detail.response, null, 4) + "\n\n\n" + Object.keys(e));
           document.querySelector('#template_1').model = {
             response: e.detail.response
           };
@@ -112,13 +113,15 @@
     var ajax3 = document.querySelector("#ajax3");
     ajax3.addEventListener('core-response', 
       function(e){
-          console.log("E3 ");
-          console.log("E3 " + JSON.stringify(e.detail.response, null, 4));
+          // e.detail.response = {};
+          // e.detail.response.feed = {"entry": e.detail.response};
+          // console.log("E3 " + JSON.stringify(e.detail.response, null, 4));
           document.querySelector('#template_3').model = {
             response: e.detail.response
+    
           };
     })
-
+            // response: e.detail.response;
 
 
 
