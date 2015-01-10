@@ -16,8 +16,8 @@
     <link rel="import" href="elements.html">
 </head>
 <body fullbleed layout vertical>
-    <!-- <core-header-panel flex> -->
-    <core-header-panel tall flex>
+    <core-header-panel flex>
+    <!-- <core-header-panel tall flex> -->
     <!-- <core-header-panel mode="scroll" flex> -->
     <!-- <core-header-panel mode="seamed" flex> -->
     <!-- <core-header-panel mode="waterfall" flex> -->
@@ -27,7 +27,26 @@
     <!-- <core-header-panel mode="cover" flex> -->
     
         <core-toolbar>
-            <core-icon-button icon='menu'></core-icon-button>
+            <!-- <core-icon-button icon='menu'></core-icon-button> -->
+
+
+      <paper-menu-button style="color: green;" >
+        <paper-icon-button icon="menu" style="color: red;"></paper-icon-button>
+        <paper-dropdown class="dropdown">
+          <core-menu class="menu">
+                <div layout vertical>
+                    <paper-item>This</paper-item>
+                    <paper-item>That</paper-item>
+                </div>
+          </core-menu>
+        </paper-dropdown>
+      </paper-menu-button>
+
+
+
+
+
+
             <!-- <div>TC LUG</div> -->
             <div class="bottom indent">TC LUG</div>
         </core-toolbar>
@@ -59,9 +78,11 @@
                     </div>
                       <br>
                   <div center vertical layout>
-                      <h4>T F The second rectangle is the smallest.</h4>
-                      <paper-toggle-button checked></paper-toggle-button>
-                    </div>
+                      <h4>The second rectangle is the smallest.</h4>
+                        <div layout horizontal>
+                            <strong>F</strong>&nbsp&nbsp<paper-toggle-button checked></paper-toggle-button>&nbsp&nbsp<strong>T</strong>
+                        </div>
+                  </div>
                   </div>
                   <div class="container blog-container">
                     <div class="photo"></div>
