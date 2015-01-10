@@ -18,51 +18,28 @@
     <script src="js/main.js"></script>
     <script src="js/vendor/leap.js"></script>
     <script src="js/vendor/leapstrap.js"></script>
+
+    <link rel="import" href="elements.html">
+
 </head>
-<body>
+<body fullbleed layout vertical>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"></button>
-          <a class="navbar-brand" href="./index.html">mac center</a>
+    <core-toolbar>
+        <div class="bottom indent">TC LUG&nbsp&nbsp&nbsp
+            <paper-item><a href='./core-header-panel.html'>core-header-panel Demo</a></paper-item>
+            <a href='./core-ajax.html'>core-ajax Demo</a>&nbsp&nbsp&nbsp
         </div>
+    </core-toolbar>
 
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="./components.html">Components</a></li>
-                        <li><a href="./leap.html">Leap Motion</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">External Links</li>
-                        <li><a href="//www.polymer-project.org">Polymer at Google</a></li>
-                        <li><a href="//www.leapmotion.com">Leap Motion</a></li>
-                        <li><a href="//wilkesalex.github.io/leapstrap/">Leapstrap</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div> --><!--/.navbar-collapse -->
-
-      </div>
-    </div>
-
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Leap Motion</h1>
-      </div>
-    </div>
 
     <div class='container'>
         <div class='well'>
-            <h5>By default, all the &lta&gt's will be leap enabled. Nice....</h5>
+            <h4>By default, all the &lta&gt's will be leap enabled. Nice....</h4>
             <a href="//ford.com">To ford.com</a>
         </div>
     </div>
 
-    <div class='container'>
+<!--     <div class='container'>
         <div class='well'>
             <div class="dropdown ">
                 <div class="btn-group">
@@ -77,10 +54,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class='container'>
         <div class='well'>
+            <h4>This group has functions attached to the onclick event of the buttons</h4>
             <div class="btn-group">
                 <button type="button" onclick="show_me(this)" data-name='left'   class="btn btn-default leap-interactive">Left</button> 
                 <button type="button" onclick="show_me(this)" data-name='middle' class="btn btn-default leap-interactive">Middle</button> 
@@ -96,13 +74,6 @@
         </div>
     </div>
 
-
-    <div class="container">
-      <hr>
-      <footer>
-        <p>&copy; deepSnit 2015</p>
-      </footer>
-    </div> <!-- /container -->        
 
     <!-- Init Leap, Set all "a" interactive, use 1 Leap cursor/finger -->
     <!-- <script>LeapManager.init({interactiveSelector:"a",maxCursors:1});</script> -->
