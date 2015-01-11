@@ -1,43 +1,26 @@
 <html>
 <head>
   <title>core-ajax demo</title>
-
     <link rel="import" href="elements.html">
-
-    <style>    
-/*      :host {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-      }*/
-      body {
-        background-color: white;
-      }
-      .card {
-        border-radius: 5px;
-        margin: 15px auto 15px auto;
-        padding: 10px;
-        background-color: grey;
-        width: 600px;
-        height: 430px;
-        text-align: center;
-      }
-      .card img {
-        border-radius: 5px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body fullbleed layout vertical>
+    <core-header-panel flex>
 
-  <core-toolbar>
-    <div>Ajax Examples&nbsp&nbsp&nbsp<a href='./core-header-panel.html'>core-header-panel Demo</a></div>
-  </core-toolbar>
+
+
+      <core-toolbar>
+        <div class="bottom indent">TC LUG&nbsp&nbsp&nbsp
+            <paper-item><a href='./core-header-panel.html'>core-header-panel Demo</a>&nbsp&nbsp&nbsp</paper-item>&nbsp&nbsp&nbsp
+            <paper-item><a href='./leap.html'>Leapstrap Demo</a></paper-item>
+        </div>
+    </core-toolbar>
+<div class='content' flex>
 
   <paper-tabs selected="{{selected}}">
-    <paper-tab><h3>Ajax 1</h3></paper-tab>
-    <paper-tab><h3>Ajax 2</h3></paper-tab>
-    <paper-tab><h3>Ajax 3</h3></paper-tab>
+    <paper-tab><h3>YouTube 'Motorcycle'</h3></paper-tab>
+    <paper-tab><h3>YouTube 'Moon'</h3></paper-tab>
+    <paper-tab><h3>Random Names</h3></paper-tab>
   </paper-tabs>
 
   <core-pages selected="{{selected}}">
@@ -45,8 +28,10 @@
     <div>
       <template id="template_1" repeat="{{response.feed.entry}}">
         <div class="card">
+            <paper-shadow z="4" class="span-shadow">
             <img src="{{media$group.media$thumbnail[0].url}}">
             <p><a href="{{link[0].href}}">{{title.$t}}</a></p>
+            </paper-shadow>
         </div>
       </template>
       <core-ajax id="ajax1" auto url="//gdata.youtube.com/feeds/api/videos/" 
@@ -57,8 +42,10 @@
     <div>
       <template id="template_2" repeat="{{response.feed.entry}}">
         <div class="card">
+            <paper-shadow z="4" class="span-shadow">
             <img src="{{media$group.media$thumbnail[0].url}}">
             <p><a href="{{link[0].href}}">{{title.$t}}</a></p>
+            </paper-shadow>
         </div>
       </template>
       <core-ajax id="ajax2" auto url="//gdata.youtube.com/feeds/api/videos/" 
@@ -68,8 +55,11 @@
 
     <div>
       <template id="template_3" repeat="{{response}}">
-        <div class="card">
-            First: {{fname}}  Last: {{lname}}
+        <div class="name_card">
+            <paper-shadow z="4" class="span-shadow">
+              <span><h2>{{fname}}&nbsp&nbsp{{lname}}</h2></span>
+            </paper-shadow>
+
         </div>
       </template>
 
@@ -78,6 +68,7 @@
           handleAs="json"></core-ajax>
     </div>
   </core-pages>
+  </div>
 
 
   <script>
@@ -113,33 +104,14 @@
     var ajax3 = document.querySelector("#ajax3");
     ajax3.addEventListener('core-response', 
       function(e){
-          // e.detail.response = {};
-          // e.detail.response.feed = {"entry": e.detail.response};
-          // console.log("E3 " + JSON.stringify(e.detail.response, null, 4));
           document.querySelector('#template_3').model = {
             response: e.detail.response
-    
           };
-    })
-            // response: e.detail.response;
-
-
-
-      // var ajax = document.querySelector("#ajax3");
-      // ajax.addEventListener("core-response", 
-      //   function(e) {
-      //     var resp = JSON.parse(e.detail.response.match('jsonFlickrApi\\((.*)\\)')[1]);
-      //     console.log("E3 " + JSON.stringify(resp, null, 4));
-      //     // console.log("E3 " + JSON.stringify(e.detail, null, 4) + "\n\n\n" + Object.keys(e));
-      //     document.querySelector('#template_3').model = {
-      //       response: e.detail.response
-      //     };
-      //   }
-      // );
-
+      })
     });
 
   </script>
+    </core-header-panel flex>
 
 </body>
 </html>

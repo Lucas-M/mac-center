@@ -23,14 +23,16 @@
 
 </head>
 <body fullbleed layout vertical>
+    <core-header-panel flex>
 
     <core-toolbar>
         <div class="bottom indent">TC LUG&nbsp&nbsp&nbsp
-            <paper-item><a href='./core-header-panel.html'>core-header-panel Demo</a></paper-item>
-            <a href='./core-ajax.html'>core-ajax Demo</a>&nbsp&nbsp&nbsp
+            <paper-item><a href='./core-header-panel.html'>core-header-panel Demo</a></paper-item>&nbsp&nbsp&nbsp
+            <paper-item><a href='./core-ajax.html'>core-ajax Demo</a></paper-item>
         </div>
     </core-toolbar>
 
+            <div class='content' flex>
 
     <div class='container'>
         <div class='well'>
@@ -73,7 +75,8 @@
             <leap-button></leap-button>
         </div>
     </div>
-
+    </core-header-panel flex>
+</div>
 
     <!-- Init Leap, Set all "a" interactive, use 1 Leap cursor/finger -->
     <!-- <script>LeapManager.init({interactiveSelector:"a",maxCursors:1});</script> -->

@@ -25,109 +25,110 @@
     
     <!-- This requires the css to be uncommented -->
     <!-- <core-header-panel mode="cover" flex> -->
-    
         <core-toolbar>
-            <div class="bottom indent">TC LUG&nbsp&nbsp&nbsp
-                <a href='./core-ajax.html'>core-ajax Demo</a>&nbsp&nbsp&nbsp
-                <a href='./leap.html'>Leapstrap Demo</a>
+            <div class="bottom indent">
+                <paper-item class='right_buffer'><a href='./core-ajax.html'>TC LUG</a></paper-item>
+                <paper-item class='right_buffer'><a href='./core-ajax.html'>core-ajax Demo</a></paper-item>
+                <paper-item class='right_buffer'><a href='./leap.html'>Leapstrap Demo</a></paper-item>
+                <paper-item><a href='./core-map.html'>Map Demo</a></paper-item>
             </div>
         </core-toolbar>
-            <div class='content' flex>
-                  <div class="container banner-container">
-                    <div class="banner" layout vertical center>
-                      <div class="circle"></div>
-                      <div layout flex horizontal>
+
+        <div class='content' flex>
+            <div class="container banner-container">
+                <div class="banner" layout vertical center>
+                    <div class="circle"></div>
+                    <div layout flex horizontal>
                         <div flex class="rect"></div>
                         <div flex class="rect"></div>
                         <div flex class="rect"></div>
                         <div flex class="rect"></div>
-                      </div>
-                      <br>
-                      <br>
-                      <h4>What size would you call this circle above?</h4>
-                        <paper-radio-group selected="small">
-                          <paper-radio-button name="small" label="Small"></paper-radio-button>
-                          <paper-radio-button name="medium" label="Medium"></paper-radio-button>
-                          <paper-radio-button name="large" label="Large"></paper-radio-button>
-                        </paper-radio-group>
                     </div>
-                  </div>
-                  <div class="container quote-container">
-                    <div class="quote" layout vertical center>
-                      <div class="rect quote dark"></div>
-                      <div class="rect quote light"></div>
-                      <div class="rect quote light"></div>
+                    <br>
+                    <br>
+                    <h4>What size would you call this circle above?</h4>
+                    <paper-radio-group selected="small">
+                        <paper-radio-button name="small" label="Small"></paper-radio-button>
+                        <paper-radio-button name="medium" label="Medium"></paper-radio-button>
+                        <paper-radio-button name="large" label="Large"></paper-radio-button>
+                    </paper-radio-group>
+                </div>
+            </div>
+
+            <div class="container quote-container">
+                <div class="quote" layout vertical center>
+                    <div class="rect quote dark"></div>
+                    <div class="rect quote light"></div>
+                    <div class="rect quote light"></div>
+                </div>
+                <br>
+                <div center vertical layout>
+                    <h4>The second rectangle is the smallest.</h4>
+                    <div layout horizontal>
+                        <strong>F</strong>&nbsp&nbsp<paper-toggle-button checked></paper-toggle-button>&nbsp&nbsp<strong>T</strong>
                     </div>
-                      <br>
-                  <div center vertical layout>
-                      <h4>The second rectangle is the smallest.</h4>
-                        <div layout horizontal>
-                            <strong>F</strong>&nbsp&nbsp<paper-toggle-button checked></paper-toggle-button>&nbsp&nbsp<strong>T</strong>
-                        </div>
-                  </div>
-                  </div>
-                  <div class="container blog-container">
-                    <div class="photo"></div>
-                    <div class="rect blog light"></div>
-                    <div class="rect blog stretch"></div>
-                    <div class="rect blog stretch"></div>
-                    <div class="rect blog stretch"></div>
-                    <p center-justified>
-                        <paper-input floatingLabel="true" label="What would be a nice photo here?"></paper-input>
-                    </p>
-                  </div>
-                <div class="container banner-container">
-                    <div class="banner" layout vertical center>
-                      <div class="circle"></div>
-                      <div layout flex horizontal>
+                </div>
+            </div>
+
+            <div class="container blog-container">
+                <div class="photo"></div>
+                <div class="rect blog light"></div>
+                <div class="rect blog stretch"></div>
+                <div class="rect blog stretch"></div>
+                <div class="rect blog stretch"></div>
+                <p center-justified>
+                    <paper-input floatingLabel="true" label="What would be a nice photo here?"></paper-input>
+                </p>
+            </div>
+
+            <div class="container banner-container">
+                <div class="banner" layout vertical center>
+                    <div class="circle"></div>
+                    <div layout flex horizontal>
                         <div flex class="rect"></div>
                         <div flex class="rect"></div>
                         <div flex class="rect"></div>
                         <div flex class="rect"></div>
-                      </div>
+                    </div>
                     </div>
                     <br>
                     <br>
                     <div center vertical layout>
-                        <h4>Check all that apply.</h4>
-                        <br>
+                    <h4>Check all that apply.</h4>
+                    <br>
 
-                      <core-label horizontal layout>
+                    <core-label horizontal layout>
                         <paper-checkbox  for></paper-checkbox>
                         <div vertical layout>
                           <h4>There is only 1 circle.</h4>
                           <div>In this group, you can only see 1 circle.</div>
                         </div>
-                      </core-label>
-                      <core-label horizontal layout>
+                    </core-label>
+                    <core-label horizontal layout>
                         <paper-checkbox  for></paper-checkbox>
                         <div vertical layout>
                           <h4>Pizza is better with anchovies.</h4>
                           <div>Anchovies are the bacon of the sea, and all bacon is good.</div>
                         </div>
-                      </core-label>
+                    </core-label>
                     <core-label horizontal layout>
                         <paper-checkbox  for></paper-checkbox>
                         <div vertical layout>
                           <h4>Magic is real.</h4>
                           <div>We all know magic is real, get over it..</div>
                         </div>
-                      </core-label>
-                    </div>
-
-
-                  </div>
-                  <div class="container quote-container">
-                    <div class="quote" layout vertical center>
-                      <div class="rect quote dark"></div>
-                      <div class="rect quote light"></div>
-                      <div class="rect quote light"></div>
-                    </div>
-                  </div>
-                  <div class="container blog-container">
-                    <google-map></google-map>
-                  </div>
+                    </core-label>
+                </div>
             </div>
+            
+            <div class="container quote-container">
+                <div class="quote" layout vertical center>
+                    <div class="rect quote dark"></div>
+                    <div class="rect quote light"></div>
+                    <div class="rect quote light"></div>
+                </div>
+            </div>
+        </div>
     </core-header-panel>   
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
