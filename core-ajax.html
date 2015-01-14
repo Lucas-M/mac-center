@@ -7,14 +7,25 @@
 <body fullbleed layout vertical>
     <core-header-panel flex>
 
+        <core-toolbar>
+            <div class="bottom indent">
+                <paper-item class='right_buffer'><a href='./core-header-panel.html'>TC LUG</a></paper-item>
+                <paper-item class='right_buffer'><a href='./core-header-panel.html'>core-header-panel</a></paper-item>
+                <paper-item class='right_buffer'><a href='./core-ajax.html'>core-ajax</a></paper-item>
+                <paper-item class='right_buffer'><a href='./leap.html'>Leapstrap</a></paper-item>
+                <paper-item><a href='./core-map.html'>google-map</a></paper-item>
+            </div>
+        </core-toolbar>
 
 
-      <core-toolbar>
+
+
+<!--       <core-toolbar>
         <div class="bottom indent">TC LUG&nbsp&nbsp&nbsp
             <paper-item><a href='./core-header-panel.html'>core-header-panel Demo</a>&nbsp&nbsp&nbsp</paper-item>&nbsp&nbsp&nbsp
             <paper-item><a href='./leap.html'>Leapstrap Demo</a></paper-item>
         </div>
-    </core-toolbar>
+    </core-toolbar> -->
 <div class='content' flex>
 
   <paper-tabs selected="{{selected}}">
@@ -42,7 +53,7 @@
     <div>
       <template id="template_2" repeat="{{response.feed.entry}}">
         <div class="card">
-            <paper-shadow z="4" class="span-shadow">
+            <paper-shadow z="1" class="span-shadow">
             <img src="{{media$group.media$thumbnail[0].url}}">
             <p><a href="{{link[0].href}}">{{title.$t}}</a></p>
             </paper-shadow>
@@ -52,7 +63,6 @@
           params='{"alt":"json", "q":"moon"}'
           handleAs="json"></core-ajax>
     </div>
-
     <div>
       <template id="template_3" repeat="{{response}}">
         <div class="name_card">
